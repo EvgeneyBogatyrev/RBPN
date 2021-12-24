@@ -4,7 +4,7 @@ from pathlib import Path
 
 os.system("chmod -R 0777 /model")
 
-with open('/model/run.py', 'w') as f:
+with open('/model/run.sh', 'w') as f:
 
     f.write('pip install /model/pyflow\n')
     
