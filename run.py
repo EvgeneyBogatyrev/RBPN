@@ -17,5 +17,5 @@ with open('/model/run.sh', 'w') as f:
 
     f.write("chmod -R 0777 /model\n")
 
-os.system("chmod -R 077 /model")
+os.system("chmod -R 0777 /model")
 os.system("/model/run.sh")
