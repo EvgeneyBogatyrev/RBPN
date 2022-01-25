@@ -1,8 +1,7 @@
 import os
 from pathlib import Path
 
-
-os.system("chmod -R 0777 /model")
+os.system("rm -rf /model/result")
 
 with open('/model/run.sh', 'w') as f:
 
@@ -13,7 +12,4 @@ with open('/model/run.sh', 'w') as f:
     for video in videos:
         f.write(f"python3 /model/eval.py --data_dir /dataset/{video} --output /results\n")
 
-    f.write("chmod -R 0777 /results\n")
-
-os.system("chmod -R 0777 /model")
 os.system("/model/run.sh")
